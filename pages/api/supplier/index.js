@@ -1,4 +1,9 @@
-import { get, add, remove, update } from "../../../controller/Supplier";
+import {
+  get,
+  add,
+  remove,
+  update,
+} from "../../../back-end/controller/Supplier";
 
 export default async function handle(req, res) {
   const { method } = req;

@@ -1,6 +1,5 @@
 /*** CONTROLLER*/
 import prisma from "../lib/prisma";
-const { PrismaClient } = require("@prisma/client");
 export async function get(req, res) {
   try {
     const suppliers = await prisma.supplier.findMany();
