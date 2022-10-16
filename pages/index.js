@@ -1,15 +1,12 @@
 import Head from "next/head";
 import Image from "next/image";
+import Header from "../font-end/components/headers/header";
 import styles from "../styles/Home.module.css";
 
-export default function Home() {
+const Home = () => {
   return (
     <div className={styles.container}>
-      <Head>
-        <title>sisccovem</title>
-        <meta name="description" content="sisccovem" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <Header />
 
       <main className={styles.main}>
         <h1 className="text-xl md-text-5xl text-center font-bold py-10">
@@ -20,4 +17,5 @@ export default function Home() {
       <footer className={styles.footer}></footer>
     </div>
   );
-}
+};
+export default Home;

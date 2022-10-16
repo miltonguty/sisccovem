@@ -1,14 +1,14 @@
 /*** CONTROLLER*/
 import prisma from "../lib/prisma";
-export async function get(req, res) {
+export const get = async (req, res) => {
   try {
     const suppliers = await prisma.supplier.findMany();
     res.status(200).json(suppliers);
   } catch (err) {
     res.status(404).json({ error: err });
   }
-}
-export async function getById(req, res) {
+};
+export const getById = async (req, res) => {
   try {
     const { supId } = req.query;
 
@@ -24,8 +24,8 @@ export async function getById(req, res) {
   } catch (err) {
     res.status(404).json({ error: err });
   }
-}
-export async function add(req, res) {
+};
+export const add = async (req, res) => {
   try {
     const { name, phone, address } = req.body;
     const supplier = await prisma.supplier.create({
@@ -35,8 +35,8 @@ export async function add(req, res) {
   } catch (err) {
     res.status(404).json({ error: err });
   }
-}
-export async function update(req, res) {
+};
+export const update = async (req, res) => {
   try {
     const { id, name, phone, address } = req.body;
     const supplierUpdate = await prisma.supplier.update({
@@ -47,8 +47,8 @@ export async function update(req, res) {
   } catch (err) {
     res.status(404).json({ error: err });
   }
-}
-export async function remove(req, res) {
+};
+export const remove = async (req, res) => {
   try {
     const { id } = req.query;
     const supplierDelete = await prisma.supplier.delete({
@@ -58,4 +58,4 @@ export async function remove(req, res) {
   } catch (err) {
     res.status(404).json({ error: err });
   }
-}
+};

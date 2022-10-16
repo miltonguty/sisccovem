@@ -5,7 +5,7 @@ import {
   update,
 } from "../../../back-end/controller/Supplier";
 
-export default async function handle(req, res) {
+const handler = async (req, res) => {
   const { method } = req;
   switch (method) {
     case "GET":
@@ -25,4 +25,5 @@ export default async function handle(req, res) {
       res.status(405).end("Method {method} Not Allowd");
       break;
   }
-}
+};
+export default handler;

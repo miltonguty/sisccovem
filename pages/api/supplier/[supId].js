@@ -1,6 +1,6 @@
-import { getById } from "../../../controller/Supplier";
+import { getById } from "../../../back-end/controller/Supplier";
 
-export default async function handler(req, res) {
+const handler = async (req, res) => {
   const { method } = req;
 
   switch (method) {
@@ -13,4 +13,5 @@ export default async function handler(req, res) {
       res.status(405).end("Method {method} Not Allowd");
       break;
   }
-}
+};
+export default handler;
