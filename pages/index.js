@@ -9,9 +9,7 @@ const Home = () => {
       <Header />
 
       <main className={styles.main}>
-        <h1 className="text-xl md-text-5xl text-center font-bold py-10">
-          page
-        </h1>
+        <h1 className="text-3xl font-bold underline">page</h1>
       </main>
 
       <footer className={styles.footer}></footer>

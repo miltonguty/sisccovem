@@ -1,11 +1,12 @@
 import "../styles/globals.css";
+import { QueryClientProvider, QueryClient } from "react-query";
 
+const queryClient = new QueryClient();
 const MyApp = ({ Component, pageProps }) => {
   return (
-    <div>
-      <h1> milton</h1>
+    <QueryClientProvider client={queryClient}>
       <Component {...pageProps} />;
-    </div>
+    </QueryClientProvider>
   );
 };
 
