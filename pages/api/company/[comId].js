@@ -1,4 +1,4 @@
-import { getById } from "../../../back-end/controller/Supplier";
+import { getById } from "../../../back-end/controller/Company";
 
 const handler = async (req, res) => {
   const { method } = req;
